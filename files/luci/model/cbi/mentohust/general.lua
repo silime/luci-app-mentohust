@@ -19,11 +19,11 @@ end
 
 require("luci.sys")
 
-m = Map("mentohust", translate("MentoHUST"), translate("Configure MentoHUST 802.11x."))
+m = Map("mentohust", translate("锐捷认证"), translate("Configure MentoHUST 802.11x."))
 
 s = m:section(TypedSection, "mentohust", translate("Status"))
 s.anonymous = true
-status = s:option(DummyValue,"_mentohust_status", "MentoHUST")
+status = s:option(DummyValue,"_mentohust_status", "锐捷状态")
 status.value = "<span id=\"_mentohust_status\">%s</span>" %{is_running("mentohust")}
 status.rawhtml = true
 t = io.popen('uci get mentohust.@mentohust[0].pinghost')
