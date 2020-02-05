@@ -19,7 +19,7 @@ end
 
 require("luci.sys")
 
-m = Map("mentohust", translate("锐捷认证"), translate("Configure MentoHUST 802.11x."))
+m = Map("mentohust", translate("MentoHUST"), translate("Configure MentoHUST 802.11x."))
 
 s = m:section(TypedSection, "mentohust", translate("Status"))
 s.anonymous = true
