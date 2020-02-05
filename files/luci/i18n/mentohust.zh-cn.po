@@ -2,16 +2,16 @@ msgid ""
 msgstr "Content-Type: text/plain; charset=UTF-8\n"
 
 msgid "MentoHUST Settings"
-msgstr "MentoHUST 设置"
+msgstr "锐捷设置"
 
 msgid "MentoHUST LOG"
-msgstr "MentoHUST 日志"
+msgstr "日志"
 
 msgid "Log file:/tmp/mentohust.log"
 msgstr "日志文件：/tmp/mentohust.log"
 
 msgid "Configure MentoHUST 802.11x."
-msgstr "配置MentoHUST 802.11x验证。"
+msgstr "配置 802.11x验证。"
 
 msgid "Normal Settings"
 msgstr "常规设置"
