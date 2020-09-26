@@ -1,7 +1,7 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=luci-app-mentohust
-PKG_VERSION=1.1.1
+PKG_VERSION=1.1.3
 PKG_RELEASE:=0
 
 PKG_BUILD_DIR:=$(BUILD_DIR)/$(PKG_NAME)
@@ -41,9 +41,11 @@ define Package/luci-app-mentohust/install
 	$(INSTALL_DIR) $(1)/usr/lib/lua/luci/model/cbi/mentohust
 	$(INSTALL_DIR) $(1)/usr/lib/lua/luci/controller
 	$(INSTALL_DIR) $(1)/usr/lib/lua/luci/i18n
+	$(INSTALL_DIR) $(1)/usr/share/rpcd/acl.d
 	$(INSTALL_DATA) $(PKG_BUILD_DIR)/mentohust.*.lmo $(1)/usr/lib/lua/luci/i18n/
 	$(INSTALL_CONF) ./files/root/etc/config/mentohust $(1)/etc/config/mentohust
 	$(INSTALL_BIN) ./files/root/etc/init.d/mentohust $(1)/etc/init.d/mentohust
+	$(INSTALL_DATA) ./files/root/usr/share/rpcd/acl.d/* $(1)/usr/share/rpcd/acl.d
 	$(INSTALL_DATA) ./files/luci/model/cbi/mentohust/general.lua $(1)/usr/lib/lua/luci/model/cbi/mentohust/general.lua
 	$(INSTALL_DATA) ./files/luci/model/cbi/mentohust/log.lua $(1)/usr/lib/lua/luci/model/cbi/mentohust/log.lua
 	$(INSTALL_DATA) ./files/luci/controller/mentohust.lua $(1)/usr/lib/lua/luci/controller/mentohust.lua
